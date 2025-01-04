@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://Sawraj5:Sawraj5%40@cluster0.bhqpcte.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
+mongoose.connect("mongodb://127.0.0.1:27017/Quiz").then(()=>{
     console.log("Connection with DB successfully completed");
 }).catch(()=>
 {

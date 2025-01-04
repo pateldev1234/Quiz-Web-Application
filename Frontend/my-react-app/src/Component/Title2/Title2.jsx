@@ -26,7 +26,7 @@ const Title2 = () => {
     }
 
     try {
-      const response = await axios.get('https://quiz-web-application-1.onrender.com/GetQuizQuestion', {
+      const response = await axios.get('http://localhost:8000/GetQuizQuestion', {
         params: {
           uid: id,
           userid,

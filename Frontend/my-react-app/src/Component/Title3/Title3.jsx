@@ -246,17 +246,17 @@ const Title3 = () => {
 
   const fetchAdditionalDetails = async (qid, uid, result1) => {
     try {
-      const quizResponse = await axios.get("https://quiz-web-application-1.onrender.com/getquizbyId", {
+      const quizResponse = await axios.get("http://localhost:8000/getquizbyId", {
         params: { qid },
       });
       const userResponse = await axios.get(
-        "https://quiz-web-application-1.onrender.com/getuserbyId",
+        "http://localhost:8000/getuserbyId",
         { params: { uid } }
       );
 
       const questionResponses = await Promise.all(
         result1.questions.map((question) =>
-          axios.get("https://quiz-web-application-1.onrender.com/getquestionbyId", {
+          axios.get("http://localhost:8000/getquestionbyId", {
             params: { qid: question.question_id },
           })
         )
@@ -264,7 +264,7 @@ const Title3 = () => {
 
       const answerResponses = await Promise.all(
         result1.questions.map((question) =>
-          axios.get("https://quiz-web-application-1.onrender.com/getanswerbyId", {
+          axios.get("http://localhost:8000/getanswerbyId", {
             params: { qid: question.question_id },
           })
         )
@@ -333,7 +333,7 @@ const Title3 = () => {
     //   alert("An unexpected error occurred. Please try again later.");
     // }
     try {
-      const response = await axios.get("https://quiz-web-application-1.onrender.com/finalresult", {
+      const response = await axios.get("http://localhost:8000/finalresult", {
         params: {
           qid,
           uid: id,

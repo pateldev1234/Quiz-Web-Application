@@ -28,7 +28,7 @@ const Title1 = () => {
        // alert(title);
        // alert(id);
        // alert(userid);
-      const response = await axios.post("https://quiz-web-application-1.onrender.com/StoreQuiz", {
+      const response = await axios.post("http://localhost:8000/StoreQuiz", {
         title,
         id,
         userid,
