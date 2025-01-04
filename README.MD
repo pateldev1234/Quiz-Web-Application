@@ -5,6 +5,7 @@ npm install
 ```
 For Frontend start the reactjs server using command
 ```sh
+cd my-react-app
 npm start or  npm run dev
 ```
 For Backend start the express server using command
