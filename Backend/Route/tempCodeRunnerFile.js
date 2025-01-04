@@ -1,0 +1,1 @@
+const ans3 = await UserDetail.findOne({_id:mongoose.Types.ObjectId(id)});
