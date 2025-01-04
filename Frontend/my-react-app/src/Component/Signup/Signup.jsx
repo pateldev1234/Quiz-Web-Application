@@ -38,7 +38,7 @@ const Signup = () => {
         
        
         try {
-            const response = await axios.post("http://localhost:8000/signup", userData, {
+            const response = await axios.post("https://quiz-web-application-1.onrender.com/signup", userData, {
                 headers: {
                     'Content-Type': 'application/json', 
                 },

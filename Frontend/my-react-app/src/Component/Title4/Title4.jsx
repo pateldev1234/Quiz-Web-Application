@@ -40,7 +40,7 @@ const Title4 = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:8000/GetQuizQuestion', {
+      const response = await axios.get('https://quiz-web-application-1.onrender.com/GetQuizQuestion', {
         params: {
           uid: id,
           userid,
@@ -102,7 +102,7 @@ const Title4 = () => {
             title,
             text: currentQuestion.text,
           });
-        const response = await axios.get('http://localhost:8000/getanswer', {
+        const response = await axios.get('https://quiz-web-application-1.onrender.com/getanswer', {
         params: {
           qid,
           uid: id,
@@ -119,7 +119,7 @@ const Title4 = () => {
       console.log(isCorrect);
 
       // Call the API to submit the answer
-      await axios.post('http://localhost:8000/submitanswer', {
+      await axios.post('https://quiz-web-application-1.onrender.com/submitanswer', {
         qid,
         uid: id,
         userid,
@@ -161,7 +161,7 @@ const Title4 = () => {
         //alert("entering to final submit button");
         //console.log(title1);
         console.log(title);
-        const response = await axios.post('http://localhost:8000/finalsubmit', {
+        const response = await axios.post('https://quiz-web-application-1.onrender.com/finalsubmit', {
             qid,
             uid: id,
             userid,

@@ -69,7 +69,7 @@ const Questions = () => {
     try {
        
         //alert("this is the answer we have");
-        const response = await axios.post("http://localhost:8000/StoreQuizQuestion", data, {
+        const response = await axios.post("https://quiz-web-application-1.onrender.com/StoreQuizQuestion", data, {
             headers: {
                 'Content-Type': 'application/json', // Ensure correct content-type
             },
